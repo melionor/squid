@@ -8,6 +8,6 @@ wget --no-check-certificate -O /etc/squid/squid.conf https://raw.githubuserconte
 user=$tr -cd 0-9 < /dev/urandom | head -c 12 ; echo ""
 pass=$tr -cd 0-9 < /dev/urandom | head -c 12 ; echo ""
 
-/usr/bin/htpasswd -b -c /etc/squid/passwd $user $pass
+/usr/bin/htpasswd -b -c /etc/squid/passwords $user $pass
 
 service squid restart
