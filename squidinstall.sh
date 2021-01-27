@@ -1,3 +1,4 @@
+#!/bin/bash
 apt-get install squid3
 
 mv /etc/squid/squid.conf /etc/squid/squid.conf.old
