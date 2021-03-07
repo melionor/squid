@@ -26,7 +26,7 @@ echo "Done"
 user=$(< /dev/urandom tr -cd 0-9 | head -c10)
 pass=$(< /dev/urandom tr -cd 0-9 | head -c10)
 htpasswd -c -b /etc/squid/passwd $user $pass
-ip addr show eth0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1
+ip addr show | grep "inet\b" | awk '{print $2}' | cut -d/ -f1
 echo port = 51230
 echo user = $user
 echo pass = $pass
