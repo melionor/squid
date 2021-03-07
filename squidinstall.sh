@@ -1,7 +1,5 @@
 #!/bin/bash
     /usr/bin/wget --no-check-certificate -O /etc/squid/squid.conf https://raw.githubusercontent.com/melionor/squid/main/squidconf
-    /sbin/iptables -I INPUT -p tcp --dport 3128 -j ACCEPT
-    /sbin/iptables-save
 IP_ALL=$(/sbin/ip -4 -o addr show scope global | awk '{gsub(/\/.*/,"",$4); print $4}')
 
 IP_ALL_ARRAY=($IP_ALL)
