@@ -22,7 +22,7 @@ systemctl restart squid
 
 echo "Done"
 
-/usr/bin/htpasswd -b -c /etc/squid/passwd $user $pass
+htpasswd -c -b /etc/squid/passwd $user $pass
 user=$(< /dev/urandom tr -cd 0-9 | head -c10)
 pass=$(< /dev/urandom tr -cd 0-9 | head -c10)
 ip addr show eth0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1
