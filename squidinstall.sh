@@ -1,7 +1,9 @@
 #!/bin/bash
-
-mv /etc/squid/squid.conf /etc/squid/squid.conf.old
+    /bin/rm -rf /etc/squid
+    /usr/bin/apt update
+    /usr/bin/apt -y install apache2-utils squid
     touch /etc/squid/passwd
+    /bin/rm -f /etc/squid/squid.conf
     /usr/bin/touch /etc/squid/blacklist.acl
     /usr/bin/wget --no-check-certificate -O /etc/squid/squid.conf https://raw.githubusercontent.com/melionor/squid/main/squidconf
     /sbin/iptables -I INPUT -p tcp --dport 3128 -j ACCEPT
