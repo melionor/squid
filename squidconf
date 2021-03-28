@@ -1,6 +1,3 @@
-#Port de Squid
-http_port 51230 #utile pour outrepasser des éventuels blocages de port
-
 #Hostname du proxy
 #visible_hostname SuperProxy
 
