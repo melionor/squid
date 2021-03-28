@@ -1,4 +1,5 @@
 #Hostname du proxy
+http_port 51230
 #visible_hostname SuperProxy
 
 #Masquage IP header HTTP (X-Forwarded-For: unknown)
